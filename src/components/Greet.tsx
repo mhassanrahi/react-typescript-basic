@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Greet = () => {
+type GreetProps = {
+    name: string,
+    messageCount: number,
+}
+
+const Greet = (props: GreetProps) => {
     return (
         <div>
-            Hi Mehmood! You have 100 unread messages.
+            Hi {props.name}! You have {props.messageCount} unread messages.
         </div>
     )
 }
